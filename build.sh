@@ -10,6 +10,7 @@ npm run build
 echo "2/4 Packing the application into a docker image..."
 docker build . -t isaacsnk/star-wars-server:latest
 
+echo $DOCKER_HUB_PASSWORD
 echo "3/4 Publishing to docker hub..."
 docker login -u isaacsnk -p $DOCKER_HUB_PASSWORD
 docker push isaacsnk/star-wars-server:latest
